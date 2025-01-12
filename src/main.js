@@ -24,28 +24,28 @@ const allCards = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'A', 'B', 'C', 'D', 'E
 //Shuffle Cards
 function shuffle(array) {
   for (let i = array.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1))
-    [array[i], array[j]] = [array[j], array[i]]
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
   }
 }
 
 // adding card element with event listener
 function createCards() {
-  shuffle(allCards)
+  shuffle(allCards);
   allCards.forEach((value, index) => {
-    const card = document.createElement('div')
-    card.classList.add('card')
-    card.dataset.value = value
+    const card = document.createElement('div');
+    card.classList.add('card');
+    card.dataset.value = value;
     card.innerHTML = `
       <div class="card-inner">
         <div class="card-front">?</div>
         <div class="card-back">${value}</div>
       </div>
-    `
-    card.addEventListener('click', flipCard)
-    gameBoard.appendChild(card)
-    cards.push(card)
-  })
+    `;
+    card.addEventListener('click', flipCard);
+    gameBoard.appendChild(card);
+    cards.push(card);
+  });
 }
 
 // Timer
