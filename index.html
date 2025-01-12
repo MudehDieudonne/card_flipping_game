@@ -1,19 +1,54 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./src/style.css">
-    <title>Card Flipping game</title>
-  </head>
-  <body>
-    <div id="app">
-      <div class="card" id="card-1">
-        <div class="front"></div>
-        <div class="back"></div>
-      </div>
+    <title>Card Flipping Game</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcom to Ms-Card Flipping Game</h1>
+        <div class="stop-watch">
+            <h2>00:00:00</h2>
+        </div>
+        <button class="start" id="start"><h2>Click to start game</h2></button>
+        <div class="game-board hidden" id="game-board">
+            <!-- all the Card will be added here dynamicaly from e js-->
+            <!--<div class="card">
+                <div class="card-inner">
+                    <div class="card-front">?</div>
+                    <div class="card-back">B</div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-front">?</div>
+                    <div class="card-back">A</div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-front">?</div>
+                    <div class="card-back">C</div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-front">?</div>
+                    <div class="card-back">D</div>
+                </div>
+            </div> -->
+        </div>
+        <div class="completion-page hidden" id="completion-page">
+            <h2>Congratulations! You've matched all the Cards!</h2>
+            <p>Total attempts: <span id="attempts">0</span></p>
+            <button id="play-again"><h2>Play Again</h2></button>
+        </div>
     </div>
-    <script type="module" src="./src/main.js"></script>
-  </body>
+    <script src="./src/index.js"></script>
+</body>
 </html>
